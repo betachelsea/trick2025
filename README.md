@@ -20,6 +20,8 @@ This repository contains all the source code used to create the final `entry.rb`
   - I wrote a short message in the comment section at the bottom, just for fun.
   - Final submission to TRICK 2025.
 
+TRICK 2025 repository is here: https://github.com/tric/trick2025
+
 # References & Thanks
 
 I learned most of the techniques from the book "THE WORLD OF OBFUSCATED, ESOTERIC, ARTISTIC PROGRAMMING" (あなたの知らない超絶技巧プログラミングの世界).
