@@ -6,6 +6,7 @@ This repository contains all the source code used to create the final `entry.rb`
 - `01_flower_description.rb`
   - The first version of the program.
   - Variable names are long and descriptive, making the code easy to understand.
+  - (Note: the comment is in Japanese only.)
 
 - `02_flower_short.rb`
   - A shortened version of the above code, created to comply with the TRICK submission rules.

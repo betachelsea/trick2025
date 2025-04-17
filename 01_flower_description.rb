@@ -22,6 +22,7 @@ loop do
     x3 = rand(10..20)
   end
 
+  # 花びらを描画する
   petal_count.times do |petal_i|
     degree = 360 / petal_count * petal_i + (now_loop + full_bloom_loop) * 5;
     radian = Math::PI / 180 * degree
@@ -35,6 +36,8 @@ loop do
       x2_changed = x2 - ((x2 / TELOMERES_PEAK) * (now_loop - TELOMERES_PEAK))
       x3_changed = x3 - ((x3 / TELOMERES_PEAK) * (now_loop - TELOMERES_PEAK))
     end
+
+    # 2本の2次ベジェ曲線を構成する点の座標を求めてpetal_pointsに保持する
     a_points = []
     b_points = []
     (0..40).each do |div|
@@ -55,6 +58,7 @@ loop do
     petal_points << b_points
   end
 
+  # 座標の点を元に、マーチングスクエア法でいい感じの描画文字を決めていく
   petal_points.each do |points|
     points.each.with_index do |p, i|
       el_number_y = (p[1]).floor + index_cy
@@ -86,9 +90,11 @@ loop do
     end
   end
 
+  # 描く
   print "\e[2J"
   print "\e[1;1H" + s.join("\n")
 
+  # フレーム数のカウントアップとリセット
   frame += 1
   if now_loop > TELOMERES_PEAK && full_bloom_loop < FULL_BLOOM_LOOP
     full_bloom_loop += 1
