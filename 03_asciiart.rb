@@ -42,7 +42,7 @@ ASCIIART = <<END
 
 END
 
-main_code = File.read('./flower_short.rb').split.join
+main_code = File.read(ARGV[0]).split.join
 code = 'eval(%w(' + main_code + ')*"");'
 code_count = code.length
 asciiart_count = ASCIIART.split.join.length
